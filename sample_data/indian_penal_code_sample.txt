@@ -1,0 +1,55 @@
+INDIAN PENAL CODE — SELECTED PROVISIONS ON CRIMINAL OFFENSES
+
+CHAPTER XVI: OF OFFENCES AFFECTING THE HUMAN BODY
+
+Section 299 — Culpable Homicide
+Whoever causes death by doing an act with the intention of causing death, or with the intention of causing such bodily injury as is likely to cause death, or with the knowledge that he is likely by such act to cause death, commits the offence of culpable homicide.
+
+Section 300 — Murder
+Culpable homicide is murder if the act by which the death is caused is done with the intention of causing death, or if it is done with the intention of causing such bodily injury as the offender knows to be likely to cause the death of the person to whom the harm is caused, or if it is done with the intention of causing bodily injury to any person and the bodily injury intended to be inflicted is sufficient in the ordinary course of nature to cause death.
+
+Exception 1: When culpable homicide is not murder — If the offender, whilst deprived of the power of self-control by grave and sudden provocation, causes the death of the person who gave the provocation.
+
+Section 302 — Punishment for Murder
+Whoever commits murder shall be punished with death, or imprisonment for life, and shall also be liable to fine. The Court shall provide special reasons in the judgment if the sentence of death is imposed.
+
+Section 304 — Punishment for Culpable Homicide not amounting to Murder
+Whoever commits culpable homicide not amounting to murder shall be punished with imprisonment for life, or imprisonment for a term which may extend to ten years, and shall also be liable to fine.
+
+Section 304A — Causing Death by Negligence
+Whoever causes the death of any person by doing any rash or negligent act not amounting to culpable homicide, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.
+
+LANDMARK CASE LAW:
+
+Bachan Singh v. State of Punjab (1980)
+Court: Supreme Court of India
+Bench: Justice Y.V. Chandrachud (CJI), Justice A.C. Gupta, Justice N.L. Untwalia, Justice P.N. Bhagwati, Justice R.S. Sarkaria
+The Supreme Court upheld the constitutional validity of the death penalty under Section 302 IPC. The Court established the "rarest of rare" doctrine, holding that the death penalty should only be imposed when the alternative option of life imprisonment is unquestionably foreclosed. The Court ruled that judges must consider both aggravating and mitigating circumstances before imposing the death sentence.
+
+Machhi Singh v. State of Punjab (1983)
+Court: Supreme Court of India
+Bench: Justice M.P. Thakkar
+This case further elaborated the "rarest of rare" doctrine from Bachan Singh. The Court laid down categories of cases where the death sentence may be warranted: (i) manner of commission of murder is extremely brutal or diabolical, (ii) motive reveals depravity, (iii) socially abhorrent nature of crime, (iv) magnitude of the crime, (v) personality of the victim.
+
+K.M. Nanavati v. State of Maharashtra (1962)
+Court: Supreme Court of India
+The Court examined the defense of grave and sudden provocation under Exception 1 of Section 300. Commander Nanavati was charged under Section 302 for the murder of Prem Ahuja. The Supreme Court held that the time gap between the provocation and the act was sufficient for a reasonable person to cool down, and therefore the defense of provocation was not applicable. This was one of the last jury trials in India, leading to the abolition of the jury system.
+
+State of Rajasthan v. Kheraj Ram (2003)
+Court: Supreme Court of India
+The Court distinguished between Section 302 (murder) and Section 304 Part I (culpable homicide not amounting to murder). The Court held that the distinction lies in the degree of probability of death: when death is the most probable result, it falls under Section 302; when death is merely a likely result, it falls under Section 304.
+
+CONSTITUTIONAL PROVISIONS:
+
+Article 21 — Protection of Life and Personal Liberty
+No person shall be deprived of his life or personal liberty except according to procedure established by law. The Supreme Court in Maneka Gandhi v. Union of India (1978) expanded the scope of Article 21 to include the right to live with dignity.
+
+Article 14 — Equality Before Law
+The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.
+
+Article 72 — Power of President to Grant Pardons
+The President shall have the power to grant pardons, reprieves, respites or remissions of punishment or to suspend, remit or commute the sentence of any person convicted of any offence in cases where the sentence is a sentence of death.
+
+RECENT LEGISLATIVE DEVELOPMENTS:
+
+The Bharatiya Nyaya Sanhita (BNS), 2023, replaced the Indian Penal Code with effect from July 1, 2024. Section 101 of the BNS corresponds to the erstwhile Section 302 of the IPC and deals with punishment for murder. The BNS retains the death penalty and life imprisonment as punishments for murder, while also introducing community service as a form of punishment for minor offences.
