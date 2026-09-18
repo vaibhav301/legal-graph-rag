@@ -8,3 +8,11 @@ __pycache__/
 dist/
 build/
 .pytest_cache/
+
+# Large data / generated files (exceed GitHub's 100MB file limit)
+test/*.log
+test/*.csv
+test/*.xlsx
+test/screenshots/
+test/*.png
+

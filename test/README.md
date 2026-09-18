@@ -1,5 +1,26 @@
 # ⚖️ LegalGraph RAG — Vector-less Legal Document Q&A
 
+## Sports Excel Import
+
+`bot.py` accepts an Excel workbook containing `School Managment`, `Student Name`,
+`Father's Name` (or `Father Name`), `Gender`, and `DOB`. A `done` column is
+created when absent. Only unfinished `Pvt. Recognized` rows in the Under 14 DOB
+range are submitted. Each selected row receives a sequential dummy Aadhaar
+starting at `100000000001`, and every player uses the shared mobile passed with
+`--default-player-mobile`. Successful rows are marked `done=True` so a rerun
+resumes safely.
+
+Install dependencies and run:
+
+```bash
+./.venv/bin/pip install -r requirements.txt
+./.venv/bin/python bot.py "/path/to/students.xlsx" \
+  --max-players 12 --default-player-mobile 9876543210
+```
+
+Each batch contains at most 12 players. Team names continue alphabetically as
+`teama`, `teamb`, ..., `teamz`, `teamaa`, `teamab`, and so on.
+
 A Retrieval-Augmented Generation (RAG) system for legal documents that replaces traditional vector databases with **Knowledge Graphs**. Built with FastAPI, NetworkX, Streamlit, and Anthropic Claude.
 
 > **No Pinecone. No Chroma. No Weaviate. No embeddings. Just graphs.**
@@ -83,6 +104,16 @@ git clone https://github.com/yourusername/legal-graph-rag.git
 cd legal-graph-rag
 pip install -r requirements.txt
 ```
+
+To distribute successive batches across multiple portal games:
+
+```bash
+./.venv/bin/python bot.py "/path/to/students.xlsx" \
+  --games "Basketball (ਬਾਸਕਟਬਾਲ),Football" --max-players 12 --batches 84
+```
+
+Each batch requires the portal login/OTP flow. With 12 players per batch,
+`--batches 84` covers up to 1,008 students and cycles them across the games.
 
 ### 2. Set your API Key
 

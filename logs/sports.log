@@ -1,0 +1,66 @@
+2026-09-15 22:02:12,400 [INFO] ====== WebDriver manager ======
+2026-09-15 22:02:12,475 [INFO] Driver [/Users/vaibhav/.wdm/drivers/chromedriver/mac-arm64/152.0.7977.82/chromedriver-mac-arm64/chromedriver] found in cache by browser version
+2026-09-15 22:02:13,666 [INFO] Opening Punjab Sports Portal
+2026-09-15 22:02:15,207 [INFO] Screenshot saved: screenshots/homepage_20260915_220214.png
+2026-09-15 22:02:15,207 [INFO] Clicking: CLICK TO APPLY
+2026-09-15 22:02:15,255 [INFO] Filling Phone Number: 6284432234
+2026-09-15 22:02:16,377 [INFO] Clicking: Get OTP
+2026-09-15 22:02:16,415 [INFO] OTP sent. Enter OTP manually.
+2026-09-15 22:02:37,642 [INFO] Screenshot saved: screenshots/after_otp_20260915_220237.png
+2026-09-15 22:02:37,643 [INFO] Clicking: Select Vaibhav Account
+2026-09-15 22:02:37,673 [INFO] Account selected successfully
+2026-09-15 22:02:37,674 [INFO] Waiting for participation page
+2026-09-15 22:02:42,846 [INFO] Screenshot saved: screenshots/participation_page_20260915_220242.png
+2026-09-15 22:02:42,846 [INFO] Clicking: Tournament Dropdown
+2026-09-15 22:03:13,109 [ERROR] Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100e24e04 chromedriver + 3444228
+1   chromedriver                        0x0000000100b213bc chromedriver + 283580
+2   chromedriver                        0x0000000100b69e14 chromedriver + 581140
+3   chromedriver                        0x0000000100ba8f70 chromedriver + 839536
+4   chromedriver                        0x0000000100b5f7bc chromedriver + 538556
+5   chromedriver                        0x0000000100df520c chromedriver + 3248652
+6   chromedriver                        0x0000000100df8244 chromedriver + 3260996
+7   chromedriver                        0x0000000100dded88 chromedriver + 3157384
+8   chromedriver                        0x0000000100df8b14 chromedriver + 3263252
+9   chromedriver                        0x0000000100dd2b38 chromedriver + 3107640
+10  chromedriver                        0x0000000100e13e44 chromedriver + 3374660
+11  chromedriver                        0x0000000100e13fa4 chromedriver + 3375012
+12  chromedriver                        0x0000000100e24aa0 chromedriver + 3443360
+13  libsystem_pthread.dylib             0x0000000188c87c54 _pthread_start + 132
+14  libsystem_pthread.dylib             0x0000000188c82c18 thread_start + 4
+
+2026-09-15 22:03:13,114 [ERROR] Traceback (most recent call last):
+  File "/Users/vaibhav/Downloads/legal-graph-rag/test.py", line 200, in <module>
+    click(wait,
+    ~~~~~^^^^^^
+          "//div[@id='TOURNAMENT']",
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+          "Tournament Dropdown")
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vaibhav/Downloads/legal-graph-rag/test.py", line 73, in click
+    element = wait.until(
+        EC.element_to_be_clickable((By.XPATH, xpath))
+    )
+  File "/Users/vaibhav/Downloads/legal-graph-rag/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100e24e04 chromedriver + 3444228
+1   chromedriver                        0x0000000100b213bc chromedriver + 283580
+2   chromedriver                        0x0000000100b69e14 chromedriver + 581140
+3   chromedriver                        0x0000000100ba8f70 chromedriver + 839536
+4   chromedriver                        0x0000000100b5f7bc chromedriver + 538556
+5   chromedriver                        0x0000000100df520c chromedriver + 3248652
+6   chromedriver                        0x0000000100df8244 chromedriver + 3260996
+7   chromedriver                        0x0000000100dded88 chromedriver + 3157384
+8   chromedriver                        0x0000000100df8b14 chromedriver + 3263252
+9   chromedriver                        0x0000000100dd2b38 chromedriver + 3107640
+10  chromedriver                        0x0000000100e13e44 chromedriver + 3374660
+11  chromedriver                        0x0000000100e13fa4 chromedriver + 3375012
+12  chromedriver                        0x0000000100e24aa0 chromedriver + 3443360
+13  libsystem_pthread.dylib             0x0000000188c87c54 _pthread_start + 132
+14  libsystem_pthread.dylib             0x0000000188c82c18 thread_start + 4
+
+
+2026-09-15 22:03:13,256 [INFO] Screenshot saved: screenshots/ERROR_20260915_220313.png

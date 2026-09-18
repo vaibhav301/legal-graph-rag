@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>3D Car Racing Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        #score {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+<div id="score">Score: 0</div>
+
+<script type="module">
+import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x87ceeb);
+
+const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// Lights
+const ambient = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambient);
+
+const directional = new THREE.DirectionalLight(0xffffff, 1);
+directional.position.set(10, 20, 10);
+scene.add(directional);
+
+// Ground
+const ground = new THREE.Mesh(
+    new THREE.PlaneGeometry(200, 500),
+    new THREE.MeshStandardMaterial({ color: 0x2e8b57 })
+);
+ground.rotation.x = -Math.PI / 2;
+scene.add(ground);
+
+// Road
+const road = new THREE.Mesh(
+    new THREE.PlaneGeometry(20, 500),
+    new THREE.MeshStandardMaterial({ color: 0x333333 })
+);
+road.rotation.x = -Math.PI / 2;
+road.position.y = 0.01;
+scene.add(road);
+
+// Lane markers
+for (let z = -250; z < 250; z += 15) {
+    const marker = new THREE.Mesh(
+        new THREE.BoxGeometry(0.5, 0.1, 6),
+        new THREE.MeshStandardMaterial({ color: 0xffffff })
+    );
+    marker.position.set(0, 0.1, z);
+    scene.add(marker);
+}
+
+// Player car
+const player = new THREE.Mesh(
+    new THREE.BoxGeometry(2, 1, 4),
+    new THREE.MeshStandardMaterial({ color: 0xff0000 })
+);
+player.position.set(0, 0.5, 15);
+scene.add(player);
+
+// Camera
+camera.position.set(0, 8, 22);
+camera.lookAt(player.position);
+
+// Controls
+const keys = {};
+window.addEventListener('keydown', e => keys[e.key] = true);
+window.addEventListener('keyup', e => keys[e.key] = false);
+
+// Enemy cars
+const enemies = [];
+
+function createEnemy() {
+    const enemy = new THREE.Mesh(
+        new THREE.BoxGeometry(2, 1, 4),
+        new THREE.MeshStandardMaterial({ color: 0x0000ff })
+    );
+
+    const lanes = [-6, 0, 6];
+    enemy.position.set(
+        lanes[Math.floor(Math.random() * lanes.length)],
+        0.5,
+        -120
+    );
+
+    scene.add(enemy);
+    enemies.push(enemy);
+}
+
+setInterval(createEnemy, 1200);
+
+let score = 0;
+let gameOver = false;
+
+function checkCollision(a, b) {
+    return (
+        Math.abs(a.position.x - b.position.x) < 2 &&
+        Math.abs(a.position.z - b.position.z) < 4
+    );
+}
+
+function animate() {
+    if (gameOver) return;
+
+    requestAnimationFrame(animate);
+
+    // Player movement
+    if (keys["ArrowLeft"]) player.position.x -= 0.2;
+    if (keys["ArrowRight"]) player.position.x += 0.2;
+
+    player.position.x = Math.max(-8, Math.min(8, player.position.x));
+
+    // Move enemies
+    for (let i = enemies.length - 1; i >= 0; i--) {
+        const enemy = enemies[i];
+        enemy.position.z += 0.8;
+
+        if (checkCollision(player, enemy)) {
+            gameOver = true;
+            alert("Game Over! Score: " + score);
+            return;
+        }
+
+        if (enemy.position.z > 30) {
+            scene.remove(enemy);
+            enemies.splice(i, 1);
+            score += 10;
+            document.getElementById("score").innerText =
+                "Score: " + score;
+        }
+    }
+
+    // Camera follow
+    camera.position.x = player.position.x;
+    camera.lookAt(player.position);
+
+    renderer.render(scene, camera);
+}
+
+animate();
+
+window.addEventListener('resize', () => {
+    camera.aspect =
+        window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+});
+</script>
+
+</body>
+</html>
